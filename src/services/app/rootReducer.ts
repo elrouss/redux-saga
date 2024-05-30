@@ -1,5 +1,5 @@
-import { combineSlices } from '@reduxjs/toolkit';
+import { combineReducers } from "redux";
 
-const rootReducer = combineSlices();
+const rootReducer = combineReducers({});
 
 export default rootReducer;

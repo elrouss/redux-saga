@@ -1,28 +1,24 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { setupListeners } from '@reduxjs/toolkit/query';
+import { createStore, compose } from 'redux';
 import rootReducer from './rootReducer';
-import rootSagaMiddleware from './rootSagaMiddleware';
-import type { Action, ThunkAction } from '@reduxjs/toolkit';
+// import rootSagaMiddleware from './rootSagaMiddleware';
 
-export const makeStore = () => {
-  const store = configureStore({
-    reducer: rootReducer,
-    middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware().concat(rootSagaMiddleware),
-  });
+// devtools
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-  setupListeners(store.dispatch);
-  return store;
-};
+const configureStore = <T extends object>(preloadedState: T) => createStore(
+  rootReducer,
+  preloadedState,
+  composeEnhancers()
+)
 
-export const store = makeStore();
+export const store = configureStore({});
 
 export type AppStore = typeof store;
 export type AppDispatch = AppStore['dispatch'];
 export type RootState = ReturnType<typeof rootReducer>;
-export type AppThunk<ThunkReturnType = void> = ThunkAction<
-  ThunkReturnType,
-  RootState,
-  unknown,
-  Action
->;
+// export type AppThunk<ThunkReturnType = void> = ThunkAction<
+//   ThunkReturnType,
+//   RootState,
+//   unknown,
+//   Action
+// >;
