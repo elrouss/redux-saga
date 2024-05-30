@@ -1,3 +1,3 @@
-import { RootState } from '@/services/app/store';
+import type { TRootState } from '@/services/app/store';
 
-export const getCounterValue = (state: RootState) => state.counter.value;
+export const getCounterValue = (state: TRootState) => state.counter.value;
