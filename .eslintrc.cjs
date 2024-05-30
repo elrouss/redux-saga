@@ -57,5 +57,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
     'no-useless-catch': 'off',
+    "default-param-last": "off",
+    "@typescript-eslint/default-param-last": "off"
   },
 };

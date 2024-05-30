@@ -6,7 +6,7 @@ import rootReducer from './rootReducer';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const configureStore = <T extends object>(preloadedState: T) =>
-  createStore(rootReducer, preloadedState, composeEnhancers());
+    createStore(rootReducer, preloadedState, composeEnhancers());
 
 export const store = configureStore({});
 

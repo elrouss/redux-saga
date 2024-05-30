@@ -1,15 +1,19 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
 
-  color: rgb(255 255 255 / 87%);
-  background-color: #242424;
+    color: rgb(255 255 255 / 87%);
+    background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizelegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body,
@@ -25,20 +29,20 @@ ol,
 li,
 a,
 button {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 button {
-  border: none;
-  cursor: pointer;
+    border: none;
+    cursor: pointer;
 }
 
 ul,
 ol {
-  list-style-type: none;
+    list-style-type: none;
 }

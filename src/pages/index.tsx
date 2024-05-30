@@ -1,3 +1,5 @@
+import { Counter } from '@/components/ui/counter/counter';
+
 export const Root = () => {
-  return <div>Hello World!</div>;
+    return <Counter />;
 };

@@ -1,0 +1,21 @@
+.Counter {
+    &__value {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__button {
+        padding: 16px 32px;
+        font-size: 22px;
+
+        &:not(:first-of-type) {
+            margin-left: 30px;
+        }
+    }
+}
